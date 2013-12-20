@@ -1,0 +1,26 @@
+#!/bin/bash
+varchoix=0
+echo Bonjour. Veuillez faire votre choix :
+echo 1. Afficher la date.
+echo 2. Additionner deux nombres.	
+echo 3. Quitter.
+read varchoix
+case $varchoix in
+1)
+	date
+	;;
+2)
+	vara=0
+	varb=0
+	echo Bonjour. Veuillez indiquer vos deux nombres :
+	read vara varb
+	result=$((vara+varb))
+	echo $result
+	;;
+3)
+	exit
+	;;
+*)
+	echo Erreur de saisie.
+	;;
+esac
